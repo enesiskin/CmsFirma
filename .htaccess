@@ -1,0 +1,12 @@
+RewriteEngine on
+
+
+
+RewriteRule ^about$ about-us.php [NC,L]
+RewriteRule ^contact$ contact-us.php [NC,L]
+RewriteRule ^home$ index.php [NC,L]
+RewriteRule ^news$ news.php [NC,L]
+RewriteRule ^sitemap.xml$ sitemap.php [NC,L]
+
+RewriteRule ^news-([0-9a-zA-Z-_]+)-([0-9]+)$ news_detail.php?sef=$1&news_id=$2 [L,QSA]
+RewriteRule ^content-([0-9a-zA-Z-_]+)-([0-9]+)$ menu_detail.php?sef=$1&menu_id=$2 [L,QSA]
